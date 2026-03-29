@@ -1,0 +1,19 @@
+{
+  "name": "feedback-management-system",
+  "version": "1.0.0",
+  "description": "Production-grade, full-stack Feedback Management System",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=client\" \"npm run dev --workspace=server\"",
+    "start": "npm run start --workspace=server",
+    "setup": "npm install && npm run build --workspace=client",
+    "seed": "npm run seed --workspace=server"
+  },
+  "workspaces": [
+    "client",
+    "server",
+    "shared"
+  ],
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
